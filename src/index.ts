@@ -30,7 +30,7 @@ app.use("/product",productRouter)
 app.use("/",userRouter)
 app.use("/review",reviewRouter)
 
-const server = app.listen(process.env.PORT || 8800, () => {
+const server = app.listen(() => {
     console.log(`This is backend running at: ` )
 })
 
