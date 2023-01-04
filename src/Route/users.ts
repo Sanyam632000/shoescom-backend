@@ -142,7 +142,7 @@ router.put("/removeProduct/:id/:productId",async(req,res)=>{
     try{
         const user = await User.findById(req.params.id);
         //const product = await Product.findById(req.params.productId)
-        await User.updateOne({$pull:{"Cart":{"id":req.params.productId}}})
+        await user.updateOne({$pull:{"Cart":{"id":req.params.productId}}})
 
           res.json("done")
         
